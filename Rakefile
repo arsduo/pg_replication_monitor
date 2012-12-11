@@ -28,8 +28,8 @@ Bundler::GemHelper.install_tasks
 require 'fileutils'
 desc "Rename the template gem"
 task :rename, :class_name, :file_name do |t, args|
-  class_matcher = /GemTemplate/
-  file_matcher = /gem_template/
+  class_matcher = /PgReplicationMonitor/
+  file_matcher = /pg_replication_monitor/
 
   begin
     # first, we rename directories
@@ -56,7 +56,7 @@ task :rename, :class_name, :file_name do |t, args|
     end
 
     # Finally, add and commit everything
-    system "git add . && git commit -m 'Rename gem_template to #{args.class_name}'"
+    system "git add . && git commit -m 'Rename pg_replication_monitor to #{args.class_name}'"
     puts "Renamed to #{args.class_name}!"
   rescue
     puts "An error occurred!  Resetting all changes."
