@@ -4,6 +4,9 @@ source "https://rubygems.org"
 gemspec
 
 gem "rake"
+gem "pg"
+gem "aws-sdk"
+gem "thor" # CLI
 
 group :development, :test do
   # pry rocks
